@@ -7,7 +7,7 @@ O curso pode ser encontrado em https://collabplay.online/br/
 ## :memo: Etapas
 
 1. Preparando o ambiente de desenvolvimento com Docker :heavy_check_mark:
-2. Estrutura de arquivos de um plugin
+2. Estrutura de arquivos de um plugin :heavy_check_mark:
 3. Desenvolvendo a área de administração
 4. Desenvolvimento do frontend
 5. Geração do arquivo JSON com os dados do Youtube
