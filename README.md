@@ -7,7 +7,7 @@ O curso pode ser encontrado em https://collabplay.online/br/
 ## :memo: Etapas
 
 1. Preparando o ambiente de desenvolvimento com Docker :heavy_check_mark:
-2. Estrutura de arquivos de um plugin :heavy_check_mark:
+2. Estrutura de arquivos de um plugin :construction_worker:
    * A estrutura de pastas foi baseada no exemplo de estrutura da documentação do Wordperss, disponível em https://developer.wordpress.org/plugins/plugin-%20%20basics/best-practices/#folder-structure
 3. Desenvolvendo a área de administração
 4. Desenvolvimento do frontend
