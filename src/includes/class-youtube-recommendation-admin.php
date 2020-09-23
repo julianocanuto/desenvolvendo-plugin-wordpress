@@ -56,6 +56,85 @@ if (!class_exists('My_Youtube_Recommendation')) {
             </div>
             <?php
         }
+        
+        public function page_init(){
+
+            register_setting(
+                'my_yt_rec_options',
+                'my_yt_rec',
+                array($this, 'sanitize')
+            );
+
+            add_settings_section( 
+                'setting_section_id_1', 
+                __('General Settings', 'my-youtube-recommendation'),
+                null,
+                'my-yt-rec-admin'                
+            );
+
+            add_setting_field(
+                'channel_id',                                       //id
+                __('Channel Id', 'my-youtube-recommendation'),      //title
+                array($this, 'channel_id_callback'),                //callback
+                'my-yt-rec-admin',                                  //page
+                'setting_section_id_1'                              //section
+            );
+
+            add_setting_field(
+                'cache_expiration',                                     //id
+                __('Cache expiration', 'my-youtube-recommendation'),    //title
+                array($this, 'cache_expiration_callback'),              //callback
+                'my-yt-rec-admin',                                      //page
+                'setting_section_id_1'                                  //section
+            );
+
+            add_setting_field(
+                'setting_section_id_2',                             //id
+                __('Post Settings', 'my-youtube-recommendation'),   //title
+                null,                                               //callback
+                'my-yt-rec-admin'                                   //page
+            );
+
+            add_setting_field(
+                'show_position',                                    //id
+                __('Show in posts', 'my-youtube-recommendation'),   //title
+                array($this, 'show_position_callback'),             //callback
+                'my-yt-rec-admin',                                  //page
+                'setting_section_id_2'                              //section
+            );
+
+            add_setting_field(
+                'layout',
+                __('Layout', 'my-youtube-recommendation'),
+                array($this, 'show_layout_callback'),
+                'my-yt-rec-admin',
+                'setting_section_id_2'
+            );
+
+            add_setting_field(
+                'limit',
+                __('Videos in list', 'my-youtube-recommendation'),
+                array($this, 'limit_callback'),
+                'my-yt-rec-admin',
+                'setting_section_id_2'
+            );
+
+            add_setting_field(
+                'setting_section_id_3',
+                __('Customized style', 'my-youtube-recommendation'),
+                null,
+                'my-yt-rec-admin'
+            );
+            
+            add_setting_field(
+                'custom_css',
+                __('Your CSS', 'my-youtube-recommendation'),
+                array($this, 'custom_css_callback'),
+                'my-yt-rec-admin',
+                'setting_section_id_3'
+            );
+
+        }
 
     }
 }
